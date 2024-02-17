@@ -1,53 +1,17 @@
-<?php
-function createRandomPassword(){
-	$chars = "003232303232023232023456789";
-	srand((double)microtime()*1000000);
-	$i = 0;
-	$pass = '' ;
-	while ($i <= 7) {
-
-		$num = rand() % 33;
-
-		$tmp = substr($chars, $num, 1);
-
-		$pass = $pass . $tmp;
-
-		$i++;
-
-	}
-	return $pass;
-}
-$finalcode='RS-'.createRandomPassword();
-?>
 <!DOCTYPE html>
 <html lang="en-US"> 
-    
  <head>
     <title>CTSEP DASHBOARDNAV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="img/png" href="image/casalogo.png">
 	  <link rel="stylesheet"  href="bootstrap/bootstrap.css">
-		<link rel="stylesheet" href="bootstrap/bootstrap-theme.css">
-    <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-		<link rel="stylesheet"  href="bootstrap/bootstrap.css.map">
-		<link rel="stylesheet"  href="bootstrap/bootstrap.min.css">
-		<link rel="stylesheet"  href="bootstrap/bootstrap.min.css.map">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-grid.css">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-grid.css.map">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-grid.min.css.">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-grid.min.css.map">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-reboot.css">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-reboot.css.map">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-reboot.min.css">
-		<link rel="stylesheet"  href="bootstrap/bootstrap-reboot.min.css.map">
-		
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      
 <style>
   
 .body{
   font-family: Arial, Helvetica, sans-serif;
-   /*background-color: gainsboro;*/
+  background-color: rgb(182, 214, 139);
 }
 
 .navbar { 
@@ -190,38 +154,35 @@ $finalcode='RS-'.createRandomPassword();
 				 </div> 
                    </div> 
      
-        <div class="dropdown">
-              <button class="dropbtn">MONITORING
-                <i class="fa fa-caret-down"></i>
-                 </button>
-                 <div class="dropdown-content"> 
-                  <a href="all_customer.php">View Customer Information</a>
-                  <!-- <a href="viewing_hall.php">View Function Hall</a>  -->
-                    <a href="viewing_booking.php">View Booking</a>
-                      <a href="viewing_reservation.php">View Aprroved Reservation</a>
-                      <a href="event_history.php">View Event History</a>
-                      <!-- <a href="notif.php">View Inquiries</a> -->
-                        <!-- <a href="view_walkin.php">View Walk-in</a>	
-                         <a href="all_employee.php">View Hired Workers Information</a>
-                           <a href="viewing_disapproved.php">View Archived</a> -->
-                            </div>
-                             </div> 
+     <div class="dropdown">
+       <button class="dropbtn">MONITORING<i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-content"> 
+          <a href="all_customer.php">View Customer Information</a>
+     <!-- <a href="viewing_hall.php">View Function Hall</a>  -->
+          <a href="viewing_booking.php">View Booking</a>
+          <a href="viewing_reservation.php">View Aprroved Reservation</a>
+          <a href="event_history.php">View Event History</a>
+     <!-- <a href="notif.php">View Inquiries</a> -->
+     <!-- <a href="view_walkin.php">View Walk-in</a>	
+          <a href="all_employee.php">View Hired Workers Information</a>
+          <a href="viewing_disapproved.php">View Archived</a> -->
+         </div>
+     </div> 
         
      <div class="dropdown" >
-         <a href="reports.php"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;  R E P O R T S</a>
-           </div>
+     <a href="reports.php"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;  R E P O R T S</a>
+     </div>
      
-          <div class="dropdown">
-           <button class="dropbtn "><i class="glyphicon glyphicon-wrench"></i> UTILITY
-            <i class="fa fa-caret-down"></i>
-             
-              </button>
-              <div class="dropdown-content"> 
-                <!--<a href="disapproved_customer.php">Restore Customer Details</a> -->
-                <a href="disapproved_customer.php" class="glyphicon glyphicon-trash">&nbsp;Archive</a>
-				 <!-- <a href="viewing_disapproved.php">View Archive</a>-->
-                    </div> 
-                      </div> 
+     <div class="dropdown">
+     <button class="dropbtn "><i class="glyphicon glyphicon-wrench">
+      </i> UTILITY<i class="fa fa-caret-down"></i>            
+     </button>
+       <div class="dropdown-content"> 
+      <!--<a href="disapproved_customer.php">Restore Customer Details</a> -->
+          <a href="disapproved_customer.php" class="glyphicon glyphicon-trash">&nbsp;Archive</a>
+			<!-- <a href="viewing_disapproved.php">View Archive</a>-->
+       </div> 
+    </div> 
      
 		           
      <!--    <li class="">
